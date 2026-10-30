@@ -1,0 +1,1408 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>BERSEEN COFFEE | PURE COFFEE EXPERIENCE</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Poppins,sans-serif;
+scroll-behavior:smooth;
+}
+
+body{
+background:#f8f5f2;
+color:#333;
+}
+
+header{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+padding:18px 8%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+background:#106F54;
+z-index:1000;
+box-shadow:0 5px 15px rgba(245, 210, 114, 0.822);
+}
+
+.logo{
+font-size:30px;
+font-weight:700;
+color:#F5EFDD;
+}
+
+.logo span{
+color:#d6a96c;
+}
+
+nav a{
+text-decoration:none;
+color:#F5EFDD;
+margin-left:25px;
+transition:.4s;
+font-weight:500;
+}
+
+nav a:hover{
+color:#d6a96c;
+}
+
+.hero{
+
+height:100vh;
+
+background:url('https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=1600&q=80') center/cover;
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+text-align:center;
+
+position:relative;
+
+}
+
+.hero::before{
+
+content:"";
+
+position:absolute;
+
+width:100%;
+
+height:100%;
+
+background:rgba(0,0,0,.55);
+
+}
+
+.hero-content{
+
+position:relative;
+
+color:#fff;
+
+max-width:800px;
+
+animation:fadeUp 1.5s;
+
+}
+
+.hero h1{
+
+font-size:65px;
+
+margin-bottom:20px;
+
+}
+
+.hero p{
+
+font-size:22px;
+
+margin-bottom:30px;
+
+}
+
+.btn{
+
+padding:15px 35px;
+
+background:#106F54;
+
+text-decoration:none;
+
+color:#F5EFDD;
+
+border-radius:40px;
+
+transition:.4s;
+
+}
+
+.btn:hover{
+
+background:#d6a96c;
+
+}
+
+section{
+
+padding:100px 10%;
+
+}
+
+.about{
+
+text-align:center;
+
+}
+
+.about h2{
+
+font-size:40px;
+
+margin-bottom:20px;
+
+color:#106F54;
+
+}
+
+.about p{
+
+font-size:18px;
+
+line-height:1.8;
+
+}
+
+.features{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+
+gap:30px;
+
+margin-top:40px;
+
+}
+
+.card{
+
+background:rgb(255, 255, 255);
+
+padding:30px;
+
+border-radius:15px;
+
+text-align:center;
+
+box-shadow:0 10px 20px rgba(31, 92, 74, 0.979);
+
+transition:.4s;
+
+}
+
+.card:hover{
+
+transform:translateY(-10px);
+
+}
+
+.card h3{
+
+color:#106F54;
+
+margin:15px 0;
+
+}
+
+footer{
+
+background:#106F54;
+
+padding:40px;
+
+color:white;
+
+text-align:center;
+
+}
+
+@keyframes fadeUp{
+
+0%{
+
+opacity:0;
+
+transform:translateY(50px);
+
+}
+
+100%{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+}
+
+@media(max-width:768px){
+
+.hero h1{
+
+font-size:42px;
+
+}
+
+.hero p{
+
+font-size:18px;
+
+}
+
+nav{
+
+display:none;
+
+}
+
+}
+/* ================= MENU SECTION ================= */
+
+.menu{
+background:#F5EFDD;
+padding:100px 8%;
+}
+
+.title{
+text-align:center;
+margin-bottom:60px;
+}
+
+.title h2{
+font-size:42px;
+color:#106F54;
+}
+
+.title p{
+color:#000000;
+margin-top:10px;
+}
+
+.menu-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:30px;
+}
+
+.menu-card{
+background:#fafafa;
+border-radius:20px;
+overflow:hidden;
+box-shadow:0 10px 20px rgb(29, 112, 91);
+transition:.4s;
+}
+
+.menu-card:hover{
+transform:translateY(-10px);
+}
+
+.menu-card img{
+width:100%;
+height:220px;
+object-fit:cover;
+}
+
+.menu-content{
+padding:20px;
+}
+
+.menu-content h3{
+color:#106F54;
+margin-bottom:10px;
+}
+
+.menu-content p{
+color:#000000;
+font-size:15px;
+line-height:1.6;
+}
+
+.price{
+display:flex;
+justify-content:space-between;
+align-items:center;
+margin-top:20px;
+}
+
+.price span{
+font-size:22px;
+font-weight:bold;
+color:#d6a96c;
+}
+
+.order-btn{
+background:#106F54;
+padding:10px 20px;
+border-radius:30px;
+text-decoration:none;
+color:white;
+transition:.3s;
+}
+
+.order-btn:hover{
+background:#d6a96c;
+}
+/*================= GALLERY =================*/
+
+.gallery{
+padding:100px 8%;
+background:#F5EFDD;
+}
+
+.gallery-grid{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+
+gap:20px;
+
+}
+
+.gallery-grid img{
+
+width:100%;
+
+height:260px;
+
+object-fit:cover;
+
+border-radius:20px;
+
+transition:.5s;
+
+cursor:pointer;
+
+}
+
+.gallery-grid img:hover{
+
+transform:scale(1.08);
+
+}
+
+
+/*================= TESTIMONIAL =================*/
+
+.testimonial{
+
+padding:100px 8%;
+
+background:#F5EFDD;
+
+}
+
+.testimonial-grid{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+
+gap:30px;
+
+}
+
+.review{
+
+background:white;
+
+padding:30px;
+
+border-radius:20px;
+
+box-shadow:0 10px 20px rgb(40, 138, 117);
+
+}
+
+.review h3{
+
+margin-top:20px;
+
+color:#106F54;
+
+}
+
+.review p{
+
+line-height:1.8;
+
+color:#000000;
+
+}
+
+
+/*================ COUNTER =================*/
+
+.counter{
+
+padding:80px 8%;
+
+background:#106F54;
+
+color:white;
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+
+text-align:center;
+
+}
+
+.counter h1{
+
+font-size:50px;
+
+color:#F5EFDD;
+
+}
+
+.counter h4{
+
+margin-top:15px;
+
+}
+
+
+/*================ WHATSAPP =================*/
+
+.whatsapp{
+
+position:fixed;
+
+bottom:30px;
+
+right:30px;
+
+background:#1e8143;
+
+color:white;
+
+width:65px;
+
+height:65px;
+
+border-radius:50%;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+font-size:35px;
+
+text-decoration:none;
+
+box-shadow:0 5px 20px rgb(34, 23, 23);
+
+animation:float 2s infinite;
+
+z-index:999;
+
+}
+
+@keyframes float{
+
+50%{
+
+transform:translateY(-10px);
+
+}
+
+}
+/*=============== CONTACT ===============*/
+
+.contact{
+
+padding:100px 8%;
+
+background:#F5EFDD;
+
+}
+
+.contact-container{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(350px,1fr));
+
+gap:40px;
+
+}
+
+.contact-info{
+
+background:#106F54;
+
+padding:40px;
+
+border-radius:20px;
+
+color:white;
+
+}
+
+.contact-info h3{
+
+margin-bottom:20px;
+
+}
+
+.contact-info p{
+
+margin:15px 0;
+
+line-height:1.8;
+
+}
+
+.contact form{
+
+display:flex;
+
+flex-direction:column;
+
+gap:20px;
+
+}
+
+.contact input,
+
+.contact textarea{
+
+padding:15px;
+
+border:1px solid #106F54;
+
+border-radius:10px;
+
+font-size:16px;
+
+outline:none;
+
+}
+
+.contact textarea{
+
+height:180px;
+
+resize:none;
+
+}
+
+.contact button{
+
+padding:15px;
+
+border:none;
+
+background:#106F54;
+
+color:white;
+
+font-size:18px;
+
+border-radius:30px;
+
+cursor:pointer;
+
+transition:.4s;
+
+}
+
+.contact button:hover{
+
+background:#d6a96c;
+
+}
+
+/*========== Reservation ==========*/
+
+.reservation{
+
+padding:100px 8%;
+
+background:#f6f1eb;
+
+}
+
+.reserve-box{
+
+max-width:700px;
+
+margin:auto;
+
+background:white;
+
+padding:40px;
+
+border-radius:20px;
+
+box-shadow:0 10px 20px rgba(0,0,0,.1);
+
+}
+
+.reserve-box input{
+
+width:100%;
+
+padding:15px;
+
+margin:15px 0;
+
+border-radius:10px;
+
+border:1px solid #ddd;
+
+}
+
+.reserve-box button{
+
+width:100%;
+
+padding:15px;
+
+background:#106F54;
+
+color:white;
+
+border:none;
+
+border-radius:30px;
+
+cursor:pointer;
+
+}
+
+/*========= Back To Top =========*/
+
+#topBtn{
+
+position:fixed;
+
+bottom:110px;
+
+right:30px;
+
+display:none;
+
+width:55px;
+
+height:55px;
+
+border:none;
+
+border-radius:50%;
+
+background:#106F54;
+
+color:white;
+
+font-size:22px;
+
+cursor:pointer;
+
+}
+
+/*========= Dark Mode =========*/
+
+.dark{
+
+background:#121212;
+
+color:white;
+
+}
+
+.dark .card,
+
+.dark .menu-card,
+
+.dark .reserve-box,
+
+.dark .review{
+
+background:#222;
+
+color:white;
+
+}
+
+.dark header{
+
+background:#111 !important;
+
+}
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<div class="logo">
+
+BERSEEM <span>COFFEE</span>
+
+</div>
+
+<nav>
+
+<a href="#">Home</a>
+
+<a href="#">About</a>
+
+<a href="#">Menu</a>
+
+<a href="#">Gallery</a>
+
+<a href="#">Contact</a>
+
+</nav>
+
+</header>
+
+<section class="hero">
+
+<div class="hero-content">
+
+<h1>PURE COFFEE EXPERIENCE</h1>
+
+<p>
+
+Enjoy the finest coffee and delicious desserts in Nairobi, Eastleigh, Jam Street.
+
+</p>
+
+<a href="#" class="btn">Order Now</a>
+
+</div>
+
+</section>
+
+<section class="about">
+
+<h2>Welcome to Berseem </h2>
+
+<p>
+
+At BERSEEM COFFEE we serve premium coffee prepared by passionate baristas using carefully selected beans. Our café also offers fresh cakes, doughnuts, cookies, croissants, muffins and other delicious desserts every day.
+
+</p>
+
+<div class="features">
+
+<div class="card">
+
+<h3>☕ Premium Coffee</h3>
+
+<p>Freshly brewed coffee from quality beans.</p>
+
+</div>
+
+<div class="card">
+
+<h3>🍰 Fresh Desserts</h3>
+
+<p>Cakes, cookies, muffins and pastries made daily.</p>
+
+</div>
+
+<div class="card">
+
+<h3>📍 Best Location</h3>
+
+<p>Nairobi, Eastleigh.</p>
+
+</div>
+
+</div>
+
+</section>
+<section class="menu">
+
+<div class="title">
+
+<h2>Our Coffee Menu</h2>
+
+<p>Freshly Brewed Every Day</p>
+
+</div>
+
+<div class="menu-grid">
+
+<div class="menu-card">
+
+<img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=700&q=80">
+
+<div class="menu-content">
+
+<h3>Espresso</h3>
+
+<p>Strong Italian espresso made from premium beans.</p>
+
+<div class="price">
+
+<span>KSh 150</span>
+
+<a href="#" class="order-btn">Order</a>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="menu-card">
+
+<img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=700&q=80">
+
+<div class="menu-content">
+
+<h3>Cappuccino</h3>
+
+<p>Rich espresso with creamy steamed milk.</p>
+
+<div class="price">
+
+<span>KSh 150</span>
+
+<a href="#" class="order-btn">Order</a>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="menu-card">
+
+<img src="https://images.unsplash.com/photo-1517701604599-bb29b565090c?auto=format&fit=crop&w=700&q=80">
+
+<div class="menu-content">
+
+<h3>Latte</h3>
+
+<p>Silky smooth latte with fresh milk.</p>
+
+<div class="price">
+
+<span>KSh 150</span>
+
+<a href="#" class="order-btn">Order</a>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="menu-card">
+
+<img src="https://images.unsplash.com/photo-1461023058943-07fcbe16d735?auto=format&fit=crop&w=700&q=80">
+
+<div class="menu-content">
+
+<h3>Mocha</h3>
+
+<p>Chocolate flavored premium coffee.</p>
+
+<div class="price">
+
+<span>KSh 200</span>
+
+<a href="#" class="order-btn">Order</a>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<section class="menu" style="background:#f6f1eb;">
+
+<div class="title">
+
+<h2>Desserts & Bakery</h2>
+
+<p>Fresh Every Morning</p>
+
+</div>
+
+<div class="menu-grid">
+
+<div class="menu-card">
+
+<img src="https://images.unsplash.com/photo-1551024601-bec78aea704b?auto=format&fit=crop&w=700&q=80">
+
+<div class="menu-content">
+
+<h3>Chocolate Cake</h3>
+
+<p>Soft delicious chocolate cake.</p>
+
+<div class="price">
+
+<span>KSh 150</span>
+
+<a href="#" class="order-btn">Order</a>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="menu-card">
+
+<img src="https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=700&q=80">
+
+<div class="menu-content">
+
+<h3>Croissant</h3>
+
+<p>Fresh buttery croissant baked daily.</p>
+
+<div class="price">
+
+<span>KSh 180</span>
+
+<a href="#" class="order-btn">Order</a>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="menu-card">
+
+<img src="https://images.unsplash.com/photo-1558961363-fa8fdf82db35?auto=format&fit=crop&w=700&q=80">
+
+<div class="menu-content">
+
+<h3>Donut</h3>
+
+<p>Sweet glazed donut with toppings.</p>
+
+<div class="price">
+
+<span>KSh 150</span>
+
+<a href="#" class="order-btn">Order</a>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="menu-card">
+
+<img src="https://images.unsplash.com/photo-1486427944299-d1955d23e34d?auto=format&fit=crop&w=700&q=80">
+
+<div class="menu-content">
+
+<h3>Cookies</h3>
+
+<p>Fresh homemade cookies.</p>
+
+<div class="price">
+
+<span>KSh 120</span>
+
+<a href="#" class="order-btn">Order</a>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+<section class="gallery">
+
+<div class="title">
+
+<h2>Gallery</h2>
+
+<p>Take a look at our Coffee & Desserts</p>
+
+</div>
+
+<div class="gallery-grid">
+
+<img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=700&q=80">
+
+<img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=700&q=80">
+
+<img src="https://images.unsplash.com/photo-1517701604599-bb29b565090c?auto=format&fit=crop&w=700&q=80">
+
+<img src="https://images.unsplash.com/photo-1551024601-bec78aea704b?auto=format&fit=crop&w=700&q=80">
+
+<img src="https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=700&q=80">
+
+<img src="https://snapcalorie-webflow-website.s3.us-east-2.amazonaws.com/media/recipe_pics_v2/medium/shaah_somali_tea.jpg"
+
+</div>
+
+</section>
+
+
+
+<section class="counter">
+
+<div>
+
+<h1 id="coffee">2500</h1>
+
+<h4>Cups Served</h4>
+
+</div>
+
+<div>
+
+<h1 id="customer">300</h1>
+
+<h4>Happy Customers</h4>
+
+</div>
+
+<div>
+
+<h1 id="dessert">1500</h1>
+
+<h4>Desserts</h4>
+
+</div>
+
+<div>
+
+<h1 id="experience">6mnths</h1>
+
+<h4>Years Experience</h4>
+
+</div>
+
+</section>
+
+
+
+<section class="testimonial">
+
+<div class="title">
+
+<h2>Customer Reviews</h2>
+
+<p>What Our Customers Say</p>
+
+</div>
+
+<div class="testimonial-grid">
+
+<div class="review">
+
+⭐⭐⭐⭐⭐
+
+<h3>Ahmed</h3>
+
+<p>
+
+The best coffee shop in Eastleigh.
+
+Amazing coffee and excellent customer service.
+
+</p>
+
+</div>
+
+<div class="review">
+
+⭐⭐⭐⭐⭐
+
+<h3>Fatuma</h3>
+
+<p>
+
+Fresh cakes and delicious cappuccino.
+
+Highly recommended.
+
+</p>
+
+</div>
+
+<div class="review">
+
+⭐⭐⭐⭐⭐
+
+<h3>Mohamed</h3>
+
+<p>
+
+Beautiful atmosphere with premium coffee.
+
+I will definitely come back.
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<a href="https://wa.me/254119575474" class="whatsapp">
+
+💬
+
+</a>
+<section class="reservation">
+
+<div class="title">
+
+<h2>Reserve Your Table</h2>
+
+<p>Book Your Coffee Time</p>
+
+</div>
+
+<div class="reserve-box">
+
+<input type="text" placeholder="Full Name">
+
+<input type="email" placeholder="Email">
+
+<input type="date">
+
+<input type="time">
+
+<input type="number" placeholder="Number of Guests">
+
+<button>Reserve Now</button>
+
+</div>
+
+</section>
+
+
+
+<section class="contact">
+
+<div class="title">
+
+<h2>Contact Us</h2>
+
+<p>We'd Love To Hear From You</p>
+
+</div>
+
+<div class="contact-container">
+
+<div class="contact-info">
+
+<h3>BERSEEM COFFEE</h3>
+
+<p>📞 +254119575474</p>
+
+<p>📧 bihicoffee@gmail.com</p>
+
+<p>📍 Nairobi, Eastleigh.</p>
+
+<iframe
+
+src="https://maps.google.com/maps?q=Eastleigh%20Nairobi&t=&z=15&ie=UTF8&iwloc=&output=embed"
+
+width="100%"
+
+height="250"
+
+style="border:0;border-radius:15px;">
+
+</iframe>
+
+</div>
+
+<form>
+
+<input type="text" placeholder="Your Name">
+
+<input type="email" placeholder="Your Email">
+
+<textarea placeholder="Your Message"></textarea>
+
+<button>Send Message</button>
+
+</form>
+
+</div>
+
+</section>
+
+
+
+<button id="topBtn">↑</button>
+<footer>
+
+<h2>BERSEEM COFFEE</h2>
+
+<p>PURE COFFEE EXPERIENCE</p>
+
+<p>📞 +254119575474</p>
+
+<p>📧 bihicoffee@gmail.com</p>
+
+<p>📍 Nairobi, Eastleigh.</p>
+
+<p style="margin-top:20px;">© 2026 Berseem Coffee. All Rights Reserved.</p>
+
+</footer>
+
+<script>
+
+window.addEventListener("scroll",()=>{
+
+const header=document.querySelector("header");
+
+if(window.scrollY>50){
+
+header.style.background="#2b180d";
+
+}else{
+
+header.style.background="#3b2416";
+
+}
+
+});
+
+function counter(id,start,end,speed){
+
+let obj=document.getElementById(id);
+
+let current=start;
+
+let timer=setInterval(function(){
+
+current++;
+
+obj.innerHTML=current;
+
+if(current==end){
+
+clearInterval(timer);
+
+}
+
+},speed);
+
+}
+
+counter("coffee",0,1200,2);
+
+counter("customer",0,850,3);
+
+counter("dessert",0,600,4);
+
+counter("experience",0,5,400);`
+// Back To Top
+
+let topBtn=document.getElementById("topBtn");
+
+window.onscroll=function(){
+
+if(document.documentElement.scrollTop>400){
+
+topBtn.style.display="block";
+
+}else{
+
+topBtn.style.display="none";
+
+}
+
+}
+
+topBtn.onclick=function(){
+
+window.scrollTo({
+
+top:0,
+
+behavior:"smooth"
+
+});
+
+}
+
+
+// Dark Mode
+
+let dark=document.createElement("button");
+
+dark.innerHTML="🌙";
+
+dark.style.position="fixed";
+
+dark.style.left="25px";
+
+dark.style.bottom="30px";
+
+dark.style.width="55px";
+
+dark.style.height="55px";
+
+dark.style.borderRadius="50%";
+
+dark.style.border="none";
+
+dark.style.cursor="pointer";
+
+dark.style.background="#3b2416";
+
+dark.style.color="white";
+
+document.body.appendChild(dark);
+
+dark.onclick=function(){
+
+document.body.classList.toggle("dark");
+
+}
+
+
+// Contact Form
+
+document.querySelector("form").addEventListener("submit",function(e){
+
+e.preventDefault();
+
+alert("Thank you! Your message has been received.");
+
+});
+</script>
+
+</body>
+</html>
